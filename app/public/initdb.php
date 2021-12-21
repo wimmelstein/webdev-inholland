@@ -4,6 +4,7 @@ use DB;
 
 $db = DB::getInstance();
 
+var_dump($db);
 try {
     $db->query("CREATE TABLE if not exists ARTICLE (
     id SERIAL PRIMARY KEY,
