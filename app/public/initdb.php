@@ -22,8 +22,8 @@ try {
 }
 
 try {
-    $articles = $db->query("SELECT * FROM articles;");
-    var_dump($articles);
+    $db->query("DESCRIBE articles;");
+
 } catch (PDOException $e) {
     echo "Query failed: " . $e->getMessage();
 }
