@@ -16,9 +16,8 @@ class DB extends PDO
                 $name = $dbOptions['name'];
                 $user = $dbOptions['username'];
                 $password = $dbOptions['password'];
-                $charset = 'utf8mb4';
 
-                $dsn = "$type:host=$host;dbname=$name;charset=$charset";
+                $dsn = "$type:host=$host;dbname=$name";
 
                 self::$instance = new DB($dsn, $user, $password);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
