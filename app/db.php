@@ -32,7 +32,7 @@ class DB extends PDO
 
     static function getConfig()
     {
-        if (getenv('DATABASE_URL') != "" {
+        if (getenv('DATABASE_URL') != "") {
             $herokuDb = parse_url(getenv('DATABASE_URL'));
             $dbopts = [
                 'type' => 'pgsql',
