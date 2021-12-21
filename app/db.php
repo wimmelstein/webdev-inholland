@@ -9,8 +9,6 @@ class DB extends PDO
         if (empty(self::$instance)) {
             try {
                 $dbOptions = self::getConfig();
-
-                $port = $dbOptions['port'];
                 $type = $dbOptions['type'];
                 $host = $dbOptions['hostname'];
                 $name = $dbOptions['name'];

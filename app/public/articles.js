@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 function getAllArticles() {
     const articlesDataElement = document.getElementById('articles-data');
     articlesDataElement.innerHTML = '';
-    fetch('http://localhost/articles')
+    fetch('/articles')
         .then(result => result.json())
         .then((out) => {
             displayArticles(out);
@@ -21,7 +21,7 @@ function createArticle() {
         'price': price.value
     }
 
-    fetch('http://localhost/articles', {
+    fetch('/articles', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function createArticle() {
 }
 
 function deleteArticle(id) {
-    const url = `http://localhost/articles/${id}`;
+    const url = `/articles/${id}`;
     fetch(url, {
         method: 'DELETE',
     })
