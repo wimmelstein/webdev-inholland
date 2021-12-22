@@ -15,9 +15,6 @@ class DB extends PDO
                 $user = $dbOptions['username'];
                 $password = $dbOptions['password'];
 
-                var_dump($dbOptions);
-                exit(127);
-
                 $dsn = "$type:host=$host;dbname=$name";
 
                 self::$instance = new DB($dsn, $user, $password);
@@ -26,10 +23,6 @@ class DB extends PDO
                 echo $pdoe->getMessage();
             }
         }
-
-        echo "Putting out the instance";
-        var_dump(self::$instance);
-        exit(127);
         return self::$instance;
     }
 

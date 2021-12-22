@@ -15,10 +15,10 @@ class ArticleRepository extends Repository
         $this->db = DB::getInstance();
     }
 
-    private string $all_articles_sql = "SELECT * FROM articles";
-    private string $create_article_sql = "insert into articles (id, name, price) values (null, :name, :price)";
-    private string $delete_article_sql = "delete from articles where id = :id";
-    private string $one_article_sql = "SELECT id, name, price from articles where id = :id";
+    private string $all_articles_sql = "SELECT * FROM article";
+    private string $create_article_sql = "insert into article (id, name, price) values (null, :name, :price)";
+    private string $delete_article_sql = "delete from article where id = :id";
+    private string $one_article_sql = "SELECT id, name, price from article where id = :id";
 
     public function findAll()
     {
