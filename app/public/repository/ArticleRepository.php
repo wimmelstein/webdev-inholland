@@ -3,6 +3,7 @@
 require_once('../db.php');
 require_once('Repository.php');
 require_once('model/Article.php');
+require_once(__DIR__ . '/../../logger.php');
 
 class ArticleRepository extends Repository
 {
@@ -30,6 +31,7 @@ class ArticleRepository extends Repository
 
     public function findById($id)
     {
+        Logger::log('INFO', self::class,  "id: " . $id);
         $this->stmt = $this->db->prepare($this->one_article_sql);
         $this->stmt->bindParam(':id', $id);
         $this->stmt->setFetchMode(PDO::FETCH_CLASS, 'Article');

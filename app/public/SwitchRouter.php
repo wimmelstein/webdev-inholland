@@ -1,5 +1,5 @@
 <?php
-
+require_once('../logger.php');
 class SwitchRouter
 {
     public function route($uri, $method, $body, $path)
