@@ -6,7 +6,7 @@ use DB;
 $db = DB::getInstance();
 
 try {
-    $db->query("CREATE TABLE if not exists ARTICLE (
+    $db->query("CREATE TABLE if not exists ARTICLES (
     id SERIAL PRIMARY KEY,
     name varchar(255) NOT NULL,
     price numeric(10,2)
