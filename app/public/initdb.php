@@ -27,3 +27,6 @@ try {
 } catch (PDOException $e) {
     echo "Query failed: " . $e->getMessage();
 }
+
+$connection = DB::getInstance();
+var_dump($connection);
