@@ -24,6 +24,7 @@ try {
 try {
     $db->query("DESCRIBE articles;");
 
+
 } catch (PDOException $e) {
     echo "Query failed: " . $e->getMessage();
 }
