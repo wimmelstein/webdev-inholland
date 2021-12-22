@@ -16,7 +16,7 @@ try {
 }
 
 try {
-    $db->query("INSERT INTO article (name, price) values('Screwdriver', 10.99), ('Chandelier', 7.99);");
+    $db->query("INSERT INTO articles (name, price) values('Screwdriver', 10.99), ('Chandelier', 7.99);");
 } catch (PDOException $e) {
     echo "Query failed: " . $e->getMessage();
 }
