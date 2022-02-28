@@ -1,6 +1,7 @@
 <?php
-require_once 'model/Article.php';
-require_once 'repository/ArticleRepository.php';
+namespace Service;
+
+use Repository\ArticleRepository;
 
 class ArticleService
 {

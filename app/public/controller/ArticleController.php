@@ -1,6 +1,7 @@
 <?php
+namespace Controller;
 
-require_once('service/ArticleService.php');
+use Service\ArticleService;
 
 class ArticleController
 {

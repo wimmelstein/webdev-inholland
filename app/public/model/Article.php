@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 class Article implements \JsonSerializable
 {
 
@@ -10,6 +12,7 @@ class Article implements \JsonSerializable
     /**
      * @return int
      */
+
     public function getId(): int
     {
         return $this->id;
@@ -55,7 +58,7 @@ class Article implements \JsonSerializable
         $this->price = $price;
     }
 
-
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return get_object_vars($this);
